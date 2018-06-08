@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<style>
+body
+{
+background-color:#8AACB8;
+}
+h2
+{
+text-align:center;
+text-decoration:underline;
+}
+.box
+{
+background-color:#3d4543;
+height:300px;
+width:250px;
+border-radius:10px;
+position:relative;
+top:80px;
+left:40%;
+}
+.display
+{
+background-color:#222;
+width:220px;
+position:relative;
+left:15px;
+top:20px;
+height:40px;
+}
+.display input
+{
+position:relative;
+left:2px;
+top:2px;
+height:35px;
+color:black;
+background-color:#bccd95;
+font-size:21px;
+text-align:right;
+}
+.keys
+{
+position:relative;
+top:15px;
+}
+.button
+{
+width:40px;
+height:30px;
+border:none;
+border-radius:8px;
+margin-left:17px;
+cursor:pointer;
+border-top:2px solid transparent;
+}
+.button.gray
+{
+color:white;
+background-color:#6f6f6f;
+border-bottom:black 2px solid;
+border-top:2px #6f6f6f solid;
+}
+.button.pink
+{
+color:black;
+background-color:#ff4561;
+border-bottom:black 2px solid;
+}
+.button.black
+{
+color:white;
+background-color:303030;
+border-bottom:black 2px solid;
+border-top:2px 303030 solid;
+}
+.button.orange
+{
+color:black;
+background-color:FF9933;
+border-bottom:black 2px solid;
+border-top:2px FF9933 solid;
+}
+.gray:active
+{
+border-top:black 2px solid;
+border-bottom:2px #6f6f6f solid;
+}
+.pink:active
+{
+border-top:black 2px solid;
+border-bottom:#ff4561 2px solid;
+}
+.black:active
+{
+border-top:black 2px solid;
+border-bottom:#303030 2px solid;
+}
+.orange:active
+{
+border-top:black 2px solid;
+border-bottom:FF9933 2px solid;
+}
+p
+{
+line-height:10px;
+}
+
+</style>
+</head>
+<body>
+	<h1>Simple Calc</h1>
+	<form name="calculator">
+		<table>
+			<tr>
+				<td><input type="button" id="clear" class="button orange" name="clear" value="c" onclick="calculator.display.value=''"></td>
+				<td colspan="3">
+					<input type="text" name="display" id="display" disabled>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button gray" name="one" value="1" onclick="calculator.display.value+='1'"></td>
+				<td><input type="button" class="button gray" name="two" value="2" onclick="calculator.display.value+='2'"></td>
+				<td><input type="button" class="button gray" name="three" value="3" onclick="calculator.display.value+='3'"></td>
+				<td><input type="button" class="button gray" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button gray" name="four" value="4" onclick="calculator.display.value+='4'"></td>
+				<td><input type="button" class="button gray" name="five" value="5" onclick="calculator.display.value+='5'"></td>
+				<td><input type="button" class="button gray" name="six" value="6" onclick="calculator.display.value+='6'"></td>
+				<td><input type="button" class="button gray" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+			</tr>
+			<tr>
+				<td><input type="button" class="button gray" name="seven" value="7" onclick="calculator.display.value+='7'"></td>
+				<td><input type="button" class="button gray" name="eight" value="8" onclick="calculator.display.value+='8'"></td>
+				<td><input type="button" class="button gray" name="nine" value="9" onclick="calculator.display.value+='9'"></td>
+				<td><input type="button" class="button gray" name="plus" value="*" onclick="calculator.display.value += '*'"></td>
+			</tr>
+			<tr>
+				
+				<td><input type="button" class="button gray" name="zero" value="0" onclick="calculator.display.value+='0'"></td>
+				<td><input type="button" class="button gray" name="doit" value="=" onclick="calculator.display.value=eval(calculator.display.value)"></td>
+				<td><input type="button" class="button gray" value="." onclick="calculator.display.value+='.'"></td>
+				<td><input type="button" class="button gray" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+			</tr>
+		</table>
+		
+	</form>
+</body>
+</html>
